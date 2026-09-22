@@ -9,3 +9,4 @@ This is my very first time, using git commands below:
 - git push
 - git checkout
 - git merge
+- git clone
