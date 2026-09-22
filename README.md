@@ -7,3 +7,4 @@ This is my very first time, using git commands below:
 - git add
 - git commit
 - git push
+- git checkout
