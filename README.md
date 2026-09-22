@@ -8,3 +8,4 @@ This is my very first time, using git commands below:
 - git commit
 - git push
 - git checkout
+- git merge
