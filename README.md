@@ -1,8 +1,9 @@
 # My Web Project
 
-This is my very first website project using HTML, CSS, and JavaScript.
+This is my very first time, using git commands below:
 
-## Features
-- Responsive design
-- Interactive UI elements
-- Clean, readable code
+## Commands
+- git status
+- git add
+- git commit
+- git push
