@@ -1,0 +1,290 @@
+:root{
+    --element-backgrounds: rgb(51, 31, 51);
+    --strength: rgba(14, 124, 14, 0.7);
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(94, 56, 113, 0.75) 30%, rgba(164, 85, 164, 0.75), rgba(118, 19, 118, 0.75));;
+    color: white;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+section{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.veiw{
+    width: 100%;
+    height: 5rem;
+    border-radius: 0 0 2rem 2rem;
+    border: var(--border);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-family: Georgia, Verdana, sans-serif;
+    transition: all .4s ease-in-out;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    background: rgb(51, 31, 51);
+}
+.logo{
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: cursive;
+  position: relative;
+}
+.nav-center{
+    margin: 0 3rem;
+    display: flex;
+}
+.btn-switch{
+    background: var(--element-backgrounds);
+    transition: all .4s ease-in-out;
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.btn-switch:hover{
+    width: 12rem;
+    border-bottom: 2px solid white;
+}
+.btn-switch:active{
+    width: 8.5rem;
+}
+.btn-switch.active{
+    border: 2px solid white;
+}
+
+.form{
+    display: none;
+}
+.form.active{
+    display: block;
+    width: 800px;
+    height: 700px;
+    border-radius: 2rem 0 0 2rem;
+    margin: 1rem auto;
+    position: relative;
+}
+.form.active.slide-from-right{
+ animation: slideFromRight 0.7s ease-out;
+}
+.form.active.slide-from-left{
+    animation: slideFromLeft 0.7s ease-out;
+}
+
+@keyframes slideFromRight{
+    from{ opacity: 0;
+          transform: translateX(850px);}
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromLeft{
+    from{ opacity: 0;
+          transform: translateX(-850px);}
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+form{
+    width: 100%;
+    border: 6px solid var(--element-backgrounds);
+    border-radius: 0 2rem 2rem 2rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.status{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    background: rgb(51, 31, 51);
+    transition: all .4s ease-in-out;
+    color: white;
+    text-align: center;
+}
+.status:hover{
+    width: 10.8rem;
+}
+.pstatus{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.msg{
+    width: 90%;
+    height: 10rem;
+    align-items: center;
+    margin: 10px auto;
+    bottom: -0.5rem;
+    outline: 1px solid red;
+    display: flex;
+    padding-left: 6%;
+    transition: all .4s ease-in-out;
+}
+.msg:hover{
+    width: 92%;
+}
+.list{
+    left: 8rem;
+    outline: 1px solid red;
+    text-align: left;
+    width: 60%;
+    height: 90%;
+    padding: 1rem 0;
+    margin-left: 0.5rem;
+    transition: all .4s ease-in-out;
+}
+.list:hover{
+    width: 62%;
+}
+.atList{
+    list-style: disc;
+}
+.atList li{
+    font-size: 1.5rem;
+     list-style: disc;
+     color: deepskyblue;
+}
+.strength{
+    width: 30%;
+    height: 90%;
+    background: rgb(51, 31, 51);
+    border: none;
+    border-radius: 1.5rem;
+    display: block;
+    text-align: center;
+    left: 0;
+    transition: all .4s ease-in-out;
+}
+.strength:hover{
+    width: 32%;
+}
+.strength-label{
+    width: 100%;
+    height: 30%;
+    font-size: 1.5rem;
+    padding: 5px 0;
+    text-align: center;
+}
+.strenth-percent{
+    width: 100%;
+    font-size: 3rem;
+    border-radius: 1.5rem;
+    height: 70%;
+    padding: 5px 0;
+    text-align: center;
+}
+.strenth-percent p{
+    font-size: 2.5rem;
+}
+.input-div{
+    width: 80%;
+    height: 4rem;
+    margin: 1rem auto;
+    display: flex;
+    transition: all .4s ease-in-out;
+}
+input{
+    width: 80%;
+    background: none;
+    border: 1px solid rgb(51, 31, 51);
+    color: var(--element-backgrounds);
+    text-align: left;
+    height: 100%;
+    font-size: 1.5rem;
+    border-radius: 2rem 0 0 2rem;
+    caret-color: rgb(51, 31, 51);
+    padding: 2rem;
+
+    transition: all .4s ease-in-out;
+}
+input:hover{
+    width: 85%;
+}
+input:active{
+    width: 80%;
+}
+input::placeholder{
+    color: var(--element-backgrounds);
+    opacity: 1;
+}
+.svg-container{
+    width: 20%;
+    height: 100%;
+    border: 2px solid rgb(51, 31, 51);
+    background: rgb(51, 31, 51);
+    cursor: pointer;
+    border-radius: 0 2rem 2rem 0;
+    align-items: center;
+    transition: all .4s ease-in-out;
+    border: none;
+}
+.svg-container svg,
+.svg-container svg path{
+    color: #fff;
+    fill: currentColor;
+}
+.svg-container:hover{
+    width: 22%;
+}
+.svg-container:active{
+    width: 19%;
+}
+.hide{
+    display: none;
+}
+.hide.show{
+    display: block;
+    margin: 1rem auto;
+}
+.btn{
+    width: 80%;
+    background: rgb(51, 31, 51);
+    height: 4rem;
+    transition: all .4s ease-in-out;
+    color: white;
+    font-size: 1.5rem;
+    font-family: var(--myfont);
+    border: none;
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+.btn:hover{
+    width: 82%;
+}
+.btn:active{
+    width: 79.5%;
+}
+@media (min-width: 37.56rem) and (max-width: 64rem){
+
+}
+@media (max-width: 37.5){
+
+}
